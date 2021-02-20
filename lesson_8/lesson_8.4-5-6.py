@@ -27,7 +27,7 @@ class Warehouse:
         # добавляем товары на склад
         self.gds_in_stock.setdefault(equip.name, dict())
         # прибавляем количество товаров к уже существующим
-        self.gds_in_stock[equip.name][equip.goods()] =\
+        self.gds_in_stock[equip.name][equip.goods()] = \
             self.gds_in_stock[equip.name].get(equip.goods(), 0) + equip.qty
 
     def send_goods(self, name, gds, num):
@@ -44,7 +44,7 @@ class Warehouse:
 
 
 class Equipment:
-    def __init__(self, name: str, brand: str, model: str, color:str, price: float, qty: int):
+    def __init__(self, name: str, brand: str, model: str, color: str, price: float, qty: int):
         self.name = name
         self.brand = brand
         self.model = model
